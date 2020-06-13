@@ -28,13 +28,13 @@ class Angle {
 public class SILab2 {
 
     public List<Integer> function(List<Angle> angleList) {
-        List<Integer> result = new ArrayList<>(); // 1
+        List<Integer> result = new ArrayList<>();
 
-        for (int i = 0; i < angleList.size(); i++) { // 2.1 i = 0, 2.2 i < angleList.size(), 2.3 i++
+        for (int i = 0; i < angleList.size(); i++) {
             int deg = angleList.get(i).getDegrees();
             int min = angleList.get(i).getMinutes();
             int sec = angleList.get(i).getSeconds();
-            if (deg >= 0 && deg < 360) { // deg > = 0 && deg < 360
+            if (deg >= 0 && deg < 360) {
                 if (min < 0 || min > 59)
                     throw new RuntimeException("The minutes of the angle are not valid!");
                 else {

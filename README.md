@@ -7,6 +7,27 @@
 Ја добив групата на код 6
 
 ###  Control Flow Graph
+###### 1. List<Integer> result = new ArrayList<>();
+###### 2.1 int i = 0;
+###### 2.2 i < angleList.size();
+###### 2.3 i++
+###### 3. int deg = angleList.get(i).getDegrees();
+###### 4. int min = angleList.get(i).getMinutes();
+###### 5. int sec = angleList.get(i).getSeconds();
+###### 6. if (deg >= 0 && deg < 360)
+###### 7. if (min < 0 || min > 59)
+###### 8. throw new RuntimeException("The minutes of the angle are not valid!");
+###### 9. if (sec < 0 || sec > 59)
+###### 10. throw new RuntimeException("The seconds of the angle are not valid");
+###### 11. result.add(deg * 3600 + min * 60 + sec);
+###### 12. else if (deg == 360)
+###### 13. if (min == 0 && sec == 0)
+###### 14. result.add(deg * 3600 + min * 60 + sec);
+###### 15. throw new RuntimeException("The angle is greater then the maximum");
+###### 16. throw new RuntimeException("The angle is smaller or greater then the minimum");
+###### 17. goto;
+###### 18. return result;
+###### 19. end;
 
 ![ControlFlowDiagram](https://github.com/aleksandartasevski/SI_lab2_151144/blob/master/ControlFlowDiagram.png)
 
@@ -74,13 +95,15 @@ C=25-21+2=6.
 Затоа кога успешно враќа резултат, го проверуваме бројот на елементи во листите со assertEquals.
 Кога очекува да фрли exception, проверуваме со assertThrows.
 
-пр.
+пр. за успешно враќање на резултат.
 
-List<Angle> testCaseOneAngles = new ArrayList<>();
-        testCaseOneAngles.add(new Angle(10, 20, 30));
-        testCaseOneAngles.add(new Angle(360, 0, 0));
-        assertEquals(testCaseOneAngles.size(), siLab2.function(testCaseOneAngles).size());
+List<Angle> testCaseOneAngles = new ArrayList<>();<br>
+testCaseOneAngles.add(new Angle(10, 20, 30));<br>
+testCaseOneAngles.add(new Angle(360, 0, 0));<br>
+assertEquals(testCaseOneAngles.size(), siLab2.function(testCaseOneAngles).size());<br>
 
-List<Angle> testCaseTwoAngles = new ArrayList<>();
-testCaseTwoAngles.add(new Angle(10, 20, 70));
+пр. кога очекуваме да врати exception.
+
+List<Angle> testCaseTwoAngles = new ArrayList<>();<br>
+testCaseTwoAngles.add(new Angle(10, 20, 70));<br>
 assertThrows(RuntimeException.class, () -> siLab2.function(testCaseTwoAngles));
