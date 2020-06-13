@@ -38,7 +38,7 @@ public class SILab2Test {
     void multipleConditionsTest() {
         List<Angle> testCaseOneAngles = new ArrayList<>();
         testCaseOneAngles.add(new Angle(10, 0, 0));
-        assertEquals(1, siLab2.function(testCaseOneAngles).size());
+        assertEquals(testCaseOneAngles.size(), siLab2.function(testCaseOneAngles).size());
 
         List<Angle> testCaseTwoAngles = new ArrayList<>();
         testCaseTwoAngles.add(new Angle(370, 0, 0));
@@ -58,7 +58,7 @@ public class SILab2Test {
 
         List<Angle> testCaseSixAngles = new ArrayList<>();
         testCaseSixAngles.add(new Angle(10, 50, 0));
-        assertEquals(1, siLab2.function(testCaseSixAngles).size());
+        assertEquals(testCaseSixAngles.size(), siLab2.function(testCaseSixAngles).size());
 
         List<Angle> testCaseSevenAngles = new ArrayList<>();
         testCaseSevenAngles.add(new Angle(10, 20, -10));
@@ -70,7 +70,7 @@ public class SILab2Test {
 
         List<Angle> testCaseNineAngles = new ArrayList<>();
         testCaseNineAngles.add(new Angle(10, 20, 50));
-        assertEquals(1, siLab2.function(testCaseNineAngles).size());
+        assertEquals(testCaseNineAngles.size(), siLab2.function(testCaseNineAngles).size());
 
         List<Angle> testCaseTenAngles = new ArrayList<>();
         testCaseTenAngles.add(new Angle(360, 0, 0));
@@ -82,7 +82,7 @@ public class SILab2Test {
 
         List<Angle> testCaseTwelveAngles = new ArrayList<>();
         testCaseTwelveAngles.add(new Angle(360, 20, 0));
-        assertEquals(1, siLab2.function(testCaseTwelveAngles).size());
+        assertEquals(testCaseTwelveAngles.size(), siLab2.function(testCaseTwelveAngles).size());
     }
 
 }
