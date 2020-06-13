@@ -15,7 +15,7 @@ public class SILab2Test {
         List<Angle> testCaseOneAngles = new ArrayList<>();
         testCaseOneAngles.add(new Angle(10, 20, 30));
         testCaseOneAngles.add(new Angle(360, 0, 0));
-        assertEquals(2, siLab2.function(testCaseOneAngles).size());
+        assertEquals(testCaseOneAngles.size(), siLab2.function(testCaseOneAngles).size());
 
         List<Angle> testCaseTwoAngles = new ArrayList<>();
         testCaseTwoAngles.add(new Angle(10, 20, 70));
